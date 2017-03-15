@@ -1,0 +1,43 @@
+<html lang="en">
+<head>
+  <title>Registeration</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="wnameth=device-wnameth, initial-scale=1">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+  <script src="{{url_for('static', filename='js/jquery.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+</head>
+<body>
+
+<div class="container">
+  <a href="/login_page">Login</a>
+  <h2 align="center">Registeration Form</h2>
+  <form action="/register" method="POST">
+    <div class="form-group">
+      <label for="name">Name:</label>
+      <input type="text" class="form-control" name="name" placeholder="Enter name">
+    </div>
+    <div class="form-group">
+      <label for="email">Email:</label>
+      <input type="email" class="form-control" name="email" placeholder="Enter email">
+    </div>
+    <div class="form-group">
+      <label for="mobile_no">Mobile No:</label>
+      <input type="text" class="form-control" name="mobile_no" placeholder="Enter email">
+    </div>
+    <div class="form-group">
+      <label for="gender">Gender:</label>
+      <input type="radio"  name="gender" value="male">  Male   &nbsp;&nbsp;&nbsp; 
+      <input type="radio"  name="gender" value="female">  Female
+    </div>
+    <div class="form-group">
+      <label for="pwd">Password:</label>
+      <input type="password" class="form-control" name="pwd" placeholder="Enter password">
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+    <button type="reset" class="btn btn-default">Clear</button>
+  </form>
+</div>
+
+</body>
+</html>
